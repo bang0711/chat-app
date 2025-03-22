@@ -104,7 +104,7 @@ function ChatAIProviders({ models }: Props) {
                       className="cursor-pointer text-xs"
                       onClick={() =>
                         handleClick({
-                          baseUrl: "http://localhost:11434/v1",
+                          baseUrl: process.env.NEXT_PUBLIC_OLLAMA_URL!,
                           model: model.name,
                           provider: "Ollama",
                           modelTitle: model.name,
